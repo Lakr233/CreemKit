@@ -64,7 +64,8 @@ open class CreemInterface {
         var request = URLRequest(url: url)
         request.httpMethod = method
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
+        request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Accept")
+        request.setValue("identity", forHTTPHeaderField: "Accept-Encoding")
         if !apiKey.isEmpty { request.setValue(apiKey, forHTTPHeaderField: "x-api-key") }
 
         do {
