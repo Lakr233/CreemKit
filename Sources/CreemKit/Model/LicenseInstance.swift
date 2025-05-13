@@ -24,6 +24,7 @@ public struct LicenseInstance: CreemObject, Identifiable {
         case test
         case live
         case sandbox
+        case prod
     }
 
     public enum LicenseInstanceEntityStatus: String, CreemObject {
